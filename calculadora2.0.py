@@ -1,4 +1,4 @@
-from operator import add, truediv, mul, sub, pow, eq
+from operator import add, truediv, mul, sub, pow
 import os
             
 listaint, listasimb = [], []
@@ -36,16 +36,17 @@ def conta(operacao) :
 
 while True:
 
-    print("- para subtração\t + para soma\n* para multipicação\t/ para divizão\n^ para potencia\t\t! para raiz\n")
-    opera = str(input("Qual a conta que deseja realizar no formato(Primeiro Número + Operador + Segundo Número) ou precione \"=\" para terminar a conta: "))
-    
+    print("- para subtração\t + para soma\n* para multipicação\t/ para divizão\n^ para potencia\t\t! para raiz\n= para finalizar a conta\n")
+    print("\nFormato (Primeiro Número + Operador + Segundo Número)")
+    opera = str(input("\nQual a conta que deseja realizar : "))
     if pararCalculador(opera) == "parar" :
-        print("\nConta terminada\n\nUltimo resultado : ", resposta)
-        input("\nPrecione enter para continuar")
+        os.system('cls')
+        print("\nUltimo resultado : ", resposta)
+        input("\nPrecione enter para continuar\n\n_")
         os.system('cls')
         break
-
+    os.system('cls')
     print("\nResultado = ", conta(opera))
     resposta = conta(opera)
-    input("\nPrecione enter para continuar")
+    input("\nPrecione enter para continuar\n\n_")
     os.system('cls')
