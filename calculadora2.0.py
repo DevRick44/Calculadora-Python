@@ -36,17 +36,17 @@ def conta(operacao) :
 
 while True:
 
-    print("- para subtração\t + para soma\n* para multipicação\t/ para divizão\n^ para potencia\t\t! para raiz\n= para finalizar a conta\n")
+    print("- para subtração\t + para soma\n* para multipicação\t/ para divizão\n^ para potencia\t\t! para raiz\n= para finalizar a conta")
     print("\nFormato (Primeiro Número + Operador + Segundo Número)")
     opera = str(input("\nQual a conta que deseja realizar : "))
     if pararCalculador(opera) == "parar" :
         os.system('cls')
-        print("\nUltimo resultado : ", resposta)
+        print("Ultimo resultado : ", resposta)
         input("\nPrecione enter para continuar\n\n_")
         os.system('cls')
         break
     os.system('cls')
-    print("\nResultado = ", conta(opera))
+    print("Resultado = ", conta(opera))
     resposta = conta(opera)
     input("\nPrecione enter para continuar\n\n_")
     os.system('cls')
